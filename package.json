@@ -1,10 +1,10 @@
 {
-    "name": "vscode-js-console-utils",
-    "displayName": "javascript console utils",
+    "name": "vscode-js-console-logs",
+    "displayName": "Improved Javascript Console Logs",
     "description": "Help insert and remove console.(*) statements",
-    "version": "0.7.0",
-    "publisher": "whtouche",
-    "repository": "https://github.com/whtouche/vscode-js-console-utils",
+    "version": "1.0.0",
+    "publisher": "Richard Ziegler",
+    "repository": "https://github.com/richardziegler/vscode-js-console-utils",
     "engines": {
         "vscode": "^1.5.0"
     },
