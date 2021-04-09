@@ -13,7 +13,8 @@
     ],
     "activationEvents": [
         "onCommand:extension.insertLogStatement",
-        "onCommand:extension.deleteAllLogStatements"
+        "onCommand:extension.deleteAllLogStatements",
+        "onCommand:extension.jsonStringifyConsoleLog"
     ],
     "main": "./extension",
     "contributes": {
@@ -25,6 +26,10 @@
             {
                 "command": "extension.deleteAllLogStatements",
                 "title": "Delete all console.log statements"
+            },
+            {
+                "command": "extension.jsonStringifyConsoleLog",
+                "title": "Console.log with JSON stringify"
             }
         ],
         "keybindings": [
@@ -38,6 +43,11 @@
                 "command": "extension.deleteAllLogStatements",
                 "key": "shift+ctrl+d",
                 "mac": "shift+cmd+d"
+            },
+            {
+                "command": "extension.jsonStringifyConsoleLog",
+                "key": "shift+ctrl+j",
+                "mac": "shift+cmd+j"
             }
         ]
     },

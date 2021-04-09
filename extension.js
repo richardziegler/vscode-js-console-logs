@@ -59,13 +59,32 @@ function activate(context) {
         text
             ? vscode.commands.executeCommand('editor.action.insertLineAfter')
                 .then(() => {
-                    const logToInsert = `console.log('${text}: ', ${text});`;
+                    const logToInsert = `console.log('${text}: ', ${text})`;
                     insertText(logToInsert);
                 })
-            : insertText('console.log();');
+            : insertText('console.log()');
 
     });
     context.subscriptions.push(insertLogStatement);
+
+    const jsonStringifyConsoleLog = vscode.commands.registerCommand('extension.jsonStringifyConsoleLog', () => {
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) { return; }
+
+        const selection = editor.selection;
+        const text = editor.document.getText(selection);
+
+        text
+            ? vscode.commands.executeCommand('editor.action.insertLineAfter')
+                .then(() => {
+                    const logToInsert = `console.log('${text}: ', JSON.stringify(${text}))`;
+                    insertText(logToInsert);
+                })
+            : insertText('console.log()');
+
+    });
+    context.subscriptions.push(jsonStringifyConsoleLog);
+
 
     const deleteAllLogStatements = vscode.commands.registerCommand('extension.deleteAllLogStatements', () => {
         const editor = vscode.window.activeTextEditor;
