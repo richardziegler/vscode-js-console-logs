@@ -3,8 +3,6 @@
 Easily insert and remove console.log statements, by Richard Ziegler  
 Fork of [vscode-js-console-utils](https://github.com/whtouche/vscode-js-console-utils) by [@whtouche](https://twitter.com/whtouche)
 
-<br>
-
 ## Installing
 
 This extension is not on the marketplace. To install please do the following:
@@ -22,8 +20,6 @@ vsce package
 ```
 vsce --install-extension --vscode-js-console-logs-1.0.0.vsix
 ```
-<br>
-<br>
 
 ## Usage
 
